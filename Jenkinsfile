@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('checkout'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github access', url: 'https://github.com/chprasannaawscloudarch/java-hello-world-with-maven.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/chprasannaawscloudarch/java-hello-world-with-maven.git']]])
             }
         }
         stage('build'){
